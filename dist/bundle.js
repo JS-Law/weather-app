@@ -140,13 +140,23 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/controllers/api.js":
+/*!********************************!*\
+  !*** ./src/controllers/api.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   fetched: () => (/* binding */ fetched)\n/* harmony export */ });\nconst apiKey = \"T733FBTX9Q7J4EG5DY5Y7LLSU\";\n\n\nconst fetchData = async (target, key) => {\n    const weatherEndpoint = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${target}?unitGroup=metric&key=${key}&contentType=json`\n    const response = await fetch(weatherEndpoint, {mode : 'cors'} )\n    const weatherData = await response.json()\n    return weatherData\n}\n\nconst fetched = fetchData('Meriden', apiKey)\nconsole.log(fetched)\n\n\n\n//# sourceURL=webpack://weather-app/./src/controllers/api.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var material_icons_iconfont_material_icons_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! material-icons/iconfont/material-icons.css */ \"./node_modules/material-icons/iconfont/material-icons.css\");\n\n\n\n\nconst key = 'T733FBTX9Q7J4EG5DY5Y7LLSU'\n\n\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var material_icons_iconfont_material_icons_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! material-icons/iconfont/material-icons.css */ \"./node_modules/material-icons/iconfont/material-icons.css\");\n/* harmony import */ var _controllers_api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./controllers/api */ \"./src/controllers/api.js\");\n\n\n\n\nconsole.log(_controllers_api__WEBPACK_IMPORTED_MODULE_2__.fetched)\n\n\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
 
 /***/ }),
 
