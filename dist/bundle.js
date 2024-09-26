@@ -150,13 +150,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/controllers/uicontroller.js":
+/*!*****************************************!*\
+  !*** ./src/controllers/uicontroller.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   WeatherIcon: () => (/* binding */ WeatherIcon)\n/* harmony export */ });\nclass WeatherIcon {\n    constructor(element, icon){\n        this.element = document.querySelector(element);\n        this.icon = icon\n    }\n\n    appendWeatherIcon(){\n        this.element.textContent = this.icon\n    }\n}\n\n\n\n//# sourceURL=webpack://weather-app/./src/controllers/uicontroller.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var material_icons_iconfont_material_icons_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! material-icons/iconfont/material-icons.css */ \"./node_modules/material-icons/iconfont/material-icons.css\");\n/* harmony import */ var _controllers_api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./controllers/api */ \"./src/controllers/api.js\");\n\n\n\n\nconsole.log(_controllers_api__WEBPACK_IMPORTED_MODULE_2__.fetched)\n\n\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var material_icons_iconfont_material_icons_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! material-icons/iconfont/material-icons.css */ \"./node_modules/material-icons/iconfont/material-icons.css\");\n/* harmony import */ var _controllers_api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./controllers/api */ \"./src/controllers/api.js\");\n/* harmony import */ var _controllers_uicontroller__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./controllers/uicontroller */ \"./src/controllers/uicontroller.js\");\n\n\n\n\n// console.log(fetched)\n\nlet testWeatherIcon = new _controllers_uicontroller__WEBPACK_IMPORTED_MODULE_3__.WeatherIcon('#todays-weather-forecast', 'rainy');\ntestWeatherIcon.appendWeatherIcon()\n\n\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
 
 /***/ }),
 

@@ -8,3 +8,7 @@ class WeatherIcon {
         this.element.textContent = this.icon
     }
 }
+
+export {
+    WeatherIcon
+}
