@@ -1,7 +1,8 @@
 const apiKey = "T733FBTX9Q7J4EG5DY5Y7LLSU";
 
 function celsiusToFahrenheit(celsius) {
-    return (celsius * 9/5) + 32;
+    const fahrenheit = (celsius * 9/5) + 32;
+    return Math.round(fahrenheit * 10) / 10;
 }
 
 class WeatherAPI {
@@ -73,10 +74,16 @@ class WeatherAPI {
         const weatherData = await this.fetchAllWeatherData();
         const currentTemp = celsiusToFahrenheit(weatherData.currentConditions.temp);
         const description = weatherData.description;
+        const minTemp = celsiusToFahrenheit(weatherData.days[0].tempmax);
+        const maxTemp = celsiusToFahrenheit(weatherData.days[0].tempmin);
 
-
-        this.todaysWeatherContainer.innerHTML = `<p>Current temperature: ${currentTemp}°F</p>
-                                    <p>Conditions: ${description}</p>`;
+        this.todaysWeatherContainer.innerHTML =     `
+            <p>Current temperature: ${currentTemp}°F</p>
+            <span>
+                <p>Min: ${minTemp}°F</p>
+                <p>Max: ${maxTemp}°F</p>
+            </span>
+            <p>Conditions: ${description}</p>`;
     }
 }
 
