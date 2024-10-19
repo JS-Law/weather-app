@@ -4,6 +4,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+p{
+    margin-block: .5em;
+}
+
 #search-button{
     border: none;
     background-color: white;
