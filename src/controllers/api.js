@@ -78,12 +78,12 @@ class WeatherAPI {
         const maxTemp = celsiusToFahrenheit(weatherData.days[0].tempmin);
 
         this.todaysWeatherContainer.innerHTML =     `
-            <p>Current temperature: ${currentTemp}°F</p>
+            <p><b>Current temperature: </b>${currentTemp}°F</p>
             <span>
-                <p>Min: ${minTemp}°F</p>
-                <p>Max: ${maxTemp}°F</p>
+                <p><b>Min: </b>${minTemp}°F</p>
+                <p><b>Max: </b>${maxTemp}°F</p>
             </span>
-            <p>Conditions: ${description}</p>`;
+            <p><b>Conditions: </b>${description}</p>`;
     }
 }
 
