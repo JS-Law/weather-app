@@ -29,7 +29,7 @@ class WeatherAPI {
     // NEEDS To BE CONVERTED TO FARENHEIT
     getCurrentTemperature = () => {
         if (this.weatherData) {
-            return this.weatherData.currentConditions.temp;
+            return celsiusToFahrenheit(this.weatherData.currentConditions.temp);
         } else {
             console.log("Weather data not fetched yet.");
             return null;
@@ -71,11 +71,11 @@ class WeatherAPI {
     // TO BE REMOVED
     displayWeather = async () => {
         const weatherData = await this.fetchAllWeatherData();
-        const currentTemp = weatherData.currentConditions.temp;
+        const currentTemp = celsiusToFahrenheit(weatherData.currentConditions.temp);
         const description = weatherData.description;
 
 
-        this.todaysWeatherContainer.innerHTML = `<p>Current temperature: ${currentTemp}°C</p>
+        this.todaysWeatherContainer.innerHTML = `<p>Current temperature: ${currentTemp}°F</p>
                                     <p>Conditions: ${description}</p>`;
     }
 }
