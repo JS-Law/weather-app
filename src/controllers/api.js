@@ -1,5 +1,9 @@
 const apiKey = "T733FBTX9Q7J4EG5DY5Y7LLSU";
 
+function celsiusToFahrenheit(celsius) {
+    return (celsius * 9/5) + 32;
+}
+
 class WeatherAPI {
     constructor(location, key, element) {
         this.location = location;

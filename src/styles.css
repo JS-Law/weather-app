@@ -31,3 +31,15 @@ input{
 #header{
 
 }
+
+#daily-weather{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#todays-weather-forecast{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
