@@ -36,6 +36,11 @@ input{
 
 }
 
+#todays-date-weather{
+    font-size: 6rem;
+    margin-block: 1rem;
+}
+
 #daily-weather{
     display: flex;
     justify-content: center;
@@ -47,3 +52,4 @@ input{
     flex-direction: column;
     align-items: center;
 }
+
